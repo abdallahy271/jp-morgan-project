@@ -1,0 +1,38 @@
+From 4401e3300ff2a90960d61e66f0a2b5fbb474255e Mon Sep 17 00:00:00 2001
+From: abdulmueez <abdallahy271@gmail.com>
+Date: Tue, 9 Jun 2020 22:51:42 -0700
+Subject: [PATCH] Create Patch File
+
+---
+ src/DataManipulator.ts | 1 +
+ src/Graph.tsx          | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/DataManipulator.ts b/src/DataManipulator.ts
+index 635ecae..9accda0 100644
+--- a/src/DataManipulator.ts
++++ b/src/DataManipulator.ts
+@@ -10,6 +10,7 @@ export interface Row {
+   trigger_alert: number | undefined,
+ }
+ 
++
+ //Changed the code to reflect the lowerbound, upperbound as well as the price ratio and return the value in a trigger alert
+ export class DataManipulator {
+   static generateRow(serverRespond: ServerRespond[]): Row {
+diff --git a/src/Graph.tsx b/src/Graph.tsx
+index 79bd0d7..2d88409 100644
+--- a/src/Graph.tsx
++++ b/src/Graph.tsx
+@@ -21,7 +21,7 @@ class Graph extends Component<IProps, {}> {
+   componentDidMount() {
+     // Get element from the DOM.
+     const elem = document.getElementsByTagName('perspective-viewer')[0] as unknown as PerspectiveViewerElement;
+-
++//changed the schema values to match the needed objects and wrote their datatypes
+     const schema = {
+       price_abc: 'float',
+       price_def: 'float',
+-- 
+2.17.2 (Apple Git-113)
+
